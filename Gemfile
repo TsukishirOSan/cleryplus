@@ -15,6 +15,11 @@ gem 'pg' # Use postgresql as the database for Active Record
 gem 'rainbow'
 gem 'uuid'
 
+group :development do
+  gem 'yard'
+  gem 'yardstick'
+end
+
 group :development, :test do
   gem 'annotate'
   gem 'better_errors'
@@ -28,8 +33,6 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'rails-erd'
   gem 'rspec-rails', '~> 3.0.0.beta'
-  gem 'yard'
-  gem 'yardstick'
 end
 
 group :test do

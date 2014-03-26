@@ -16,8 +16,9 @@ describe CsvImporter do
         it { expect(csv_importer.to_hashes.length).to eq(csv_importer.rows.length - 1) }
       end
 
-      it 'sets hash keys to headers' do
-        sorted_headers = csv_importer.rows.first.sort
+      it 'sets hash keys to headers string equivalents' do
+        sorted_headers = csv_importer.rows.first.map {|string| CsvImporter::HEADER_MAP[string] }.sort
+
         csv_importer.to_hashes.each do |hash|
           expect(hash.keys.sort).to eq(sorted_headers)
         end
