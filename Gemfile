@@ -6,10 +6,10 @@ ruby '2.1.1'
 gem 'rails', '4.0.4'
 gem 'rails-api'
 
-
 # MAIN STUFF
 gem 'active_model_serializers'
 gem 'awesome_print'
+gem 'contracts', git: 'https://github.com/egonSchiele/contracts.ruby.git'
 gem 'oj'
 gem 'pg' # Use postgresql as the database for Active Record
 gem 'rainbow'
