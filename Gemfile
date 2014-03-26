@@ -1,12 +1,43 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
-
 gem 'rails-api'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+
+# MAIN STUFF
+gem 'active_model_serializers'
+gem 'awesome_print'
+gem 'oj'
+gem 'pg' # Use postgresql as the database for Active Record
+gem 'rainbow'
+gem 'uuid'
+
+group :development, :test do
+  gem 'annotate'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'brakeman'
+  gem 'dotenv'
+  gem 'factory_girl_rails'
+  gem 'oink'
+  gem 'pry-nav'
+  gem 'puma'
+  gem 'quiet_assets'
+  gem 'rails-erd'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'yard'
+  gem 'yardstick'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'simplecov', '~> 0.8.2', :require => false
+end
 
 
 # To use ActiveModel has_secure_password
