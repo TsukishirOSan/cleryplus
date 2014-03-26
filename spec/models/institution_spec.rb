@@ -3,6 +3,8 @@ require 'spec_helper'
 describe Institution do
   let (:institution) { FactoryGirl.build(:institution) }
 
+  it { should have_many(:campuses) }
+
   describe '#valid?' do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:unit_id) }
