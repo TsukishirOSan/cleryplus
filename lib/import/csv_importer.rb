@@ -32,9 +32,11 @@ class CsvImporter < Struct.new(:csv_path)
   # @return [Array<Array<String,nil>>] array of rows
   def rows
     unless @rows.present?
+      Rails.logger.info("Reading CSV from #{csv_path}")
       @rows = CSV.read(csv_path)
       # get rid of crappy ["Criminal Offenses - On campus"]
       @rows.shift
+      Rails.logger.info("Read #{rows.length - 1} usable rows from CSV")
     end
 
     @rows
@@ -48,6 +50,7 @@ class CsvImporter < Struct.new(:csv_path)
     headers = rows.first.map {|string_header| HEADER_MAP.fetch(string_header) }
 
     rows[1..rows.length].map do |row|
+      Rails.logger.info("Constructing hash for #{Rainbow(row[2]).green} (#{row.first})")
       Hash[headers.zip(row)]
     end
   end
