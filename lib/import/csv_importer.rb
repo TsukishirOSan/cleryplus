@@ -9,21 +9,23 @@ class CsvImporter < Struct.new(:csv_path)
   # @api public
   # @return Hash{String => Symbol}
   HEADER_MAP = {
-    'Survey year' => :survey_year,
-    'Unitid' => :unit_id,
-    'Institution name' => :institution_name,
-    'Campus ID' => :campus_id,
-    ' Campus Name' => :campus_name,
+    'year'             => :survey_year,
+    'UNITID_P'         => :unit_id,
+    'on_or_off_campus' => :on_or_off_campus,
+    'INSTNM'           => :institution_name,
+    'BRANCH'           => :campus_name,
     'Institution Size' => :institution_size,
-    'Murder/Non-negligent manslaughter' => :murder_non_negligent_manslaughter,
-    'Negligent manslaughter' => :negligent_manslaughter,
-    'Sex offenses - Forcible' => :sex_offenses_forcible,
-    'Sex offenses - Non-forcible' => :sex_offenses_non_forcible,
-    'Robbery' => :robber,
-    'Aggravated assault' => :aggravated_assault,
-    'Burglary' => :burglary,
-    'Motor vehicle theft' => :motor_vehicle_theft,
-    'Arson' => :arson
+    'Address'          => :address,
+    'City'             => :city,
+    'State'            => :state,
+    'Zip'              => :zip,
+    'sector_cd'        => :sector_cd,
+    'sector_desc'      => :sector_desc,
+    'men_total'        => :men_total,
+    'women_total'      => :women_total,
+    'Total'            => :total,
+    'FORCIB'           => :forcible,
+    'NONFOR'           => :non_forcible
   }
 
   Contract nil => ArrayOf[ArrayOf[Maybe[String]]]
@@ -34,8 +36,6 @@ class CsvImporter < Struct.new(:csv_path)
     unless @rows.present?
       Rails.logger.info("Reading CSV from #{csv_path}")
       @rows = CSV.read(csv_path)
-      # get rid of crappy ["Criminal Offenses - On campus"]
-      @rows.shift
       Rails.logger.info("Read #{rows.length - 1} usable rows from CSV")
     end
 

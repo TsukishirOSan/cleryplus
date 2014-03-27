@@ -1,20 +1,20 @@
-Criminal Offenses - On campus
-Survey year,Unitid,Institution name,Campus ID, Campus Name,Institution Size,Murder/Non-negligent manslaughter,Negligent manslaughter,Sex offenses - Forcible,Sex offenses - Non-forcible,Robbery,Aggravated assault,Burglary,Motor vehicle theft,Arson
-2001,177834,A T Still University of Health Sciences,1,Missouri Campus,1140,0,0,0,0,0,0,0,0,0
-2001,436526,A.B.I. School of Barbering & Cosmetology of Chelsea Inc.,1,ABI School of Barbering & Cosmetology of Chelsea,84,0,0,0,0,0,0,0,0,0
-2001,419378,A1 BUSINESS AND TECHNICAL COLLEGE,1,A 1 BUSINESS AND TECHNICAL COLLEGE,255,0,0,0,0,0,0,0,0,0
-2001,180203,Aaniiih Nakoda College,1,Fort Belknap College,170,0,0,0,0,0,0,0,0,0
-2001,161615,Aaron's Academy of Beauty,1,Main Campus,27,0,0,0,0,0,0,0,0,0
-2001,176497,Abbott Academy of Cosmetology Arts and Sciences LLC,1,Main Campus,47,0,0,0,0,0,0,0,0,0
-2001,106281,ABC Beauty College Inc,1,ABC Beauty College- Inc,18,0,0,0,0,0,0,0,0,0
-2001,222178,Abilene Christian University,1,Main Campus,4673,0,0,1,0,0,0,5,0,0
-2001,210456,Abington Memorial Hospital Dixon School of Nursing,1,Main Campus,65,0,0,0,0,0,0,0,0,0
-2001,138558,Abraham Baldwin Agricultural College,1,Main Campus,2855,0,0,0,0,0,0,6,0,0
-2001,138558,Abraham Baldwin Agricultural College,2,ABAC on the Square in Moultrie,2855,0,0,0,0,0,0,0,0,0
-2001,108199,Abram Friedman Occupational Center,1,Abram Friedman Occupational Center,,0,0,0,0,0,0,1,0,0
-2001,421896,Academia Serrant Inc,1,Ponce,135,0,0,0,0,1,1,0,1,0
-2001,421896,Academia Serrant Inc,2,Sabana Grande,135,0,0,0,0,0,0,0,0,0
-2001,421896,Academia Serrant Inc,3,Aibonito,135,0,0,0,0,1,0,0,0,0
-2001,429003,Academia Vocational Del Turabo,1,Main Campus,218,0,0,0,0,0,0,0,0,0
-2001,172866,Academy College,1,Main Campus,367,0,0,0,0,0,0,0,0,0
-2001,442903,Academy Education Services,1,Academy Education Services,,0,0,0,0,0,0,0,0,0
+UNITID_P,year,on_or_off_campus,INSTNM,BRANCH,Address,City,State,Zip,sector_cd,sector_desc,men_total,women_total,Total,FORCIB,NONFOR
+10065401,2006,"Off-campus","Alabama A & M University","Main Campus","4107 MERIDIAN ST","NORMAL","AL",35762,1,"Public, 4-year or above",2505,3201,5706,,
+10065401,2006,"On-campus","Alabama A & M University","Main Campus","4107 MERIDIAN ST","NORMAL","AL",35762,1,"Public, 4-year or above",2505,3201,5706,1,0
+10065401,2006,"Total on or off campus","Alabama A & M University","Main Campus","4107 MERIDIAN ST","NORMAL","AL",35762,1,"Public, 4-year or above",2505,3201,5706,,
+10065401,2007,"Off-campus","Alabama A & M University","Main Campus","4107 MERIDIAN ST","NORMAL","AL",35762,1,"Public, 4-year or above",2505,3201,5706,0,0
+10065401,2007,"On-campus","Alabama A & M University","Main Campus","4107 MERIDIAN ST","NORMAL","AL",35762,1,"Public, 4-year or above",2505,3201,5706,0,0
+10065401,2007,"Total on or off campus","Alabama A & M University","Main Campus","4107 MERIDIAN ST","NORMAL","AL",35762,1,"Public, 4-year or above",2505,3201,5706,0,0
+10066301,2006,"Off-campus","University of Alabama at Birmingham","Main Campus","ADMINISTRATION BLDG SUITE 1070, 701 20th Street So","BIRMINGHAM","AL",352940110,1,"Public, 4-year or above",6480,9766,16246,,
+10066301,2006,"On-campus","University of Alabama at Birmingham","Main Campus","ADMINISTRATION BLDG SUITE 1070, 701 20th Street So","BIRMINGHAM","AL",352940110,1,"Public, 4-year or above",6480,9766,16246,1,0
+10066301,2006,"Total on or off campus","University of Alabama at Birmingham","Main Campus","ADMINISTRATION BLDG SUITE 1070, 701 20th Street So","BIRMINGHAM","AL",352940110,1,"Public, 4-year or above",6480,9766,16246,,
+10066301,2007,"Off-campus","University of Alabama at Birmingham","Main Campus","ADMINISTRATION BLDG SUITE 1070, 701 20th Street So","BIRMINGHAM","AL",352940110,1,"Public, 4-year or above",6480,9766,16246,,
+10066301,2007,"On-campus","University of Alabama at Birmingham","Main Campus","ADMINISTRATION BLDG SUITE 1070, 701 20th Street So","BIRMINGHAM","AL",352940110,1,"Public, 4-year or above",6480,9766,16246,0,0
+10066301,2007,"Total on or off campus","University of Alabama at Birmingham","Main Campus","ADMINISTRATION BLDG SUITE 1070, 701 20th Street So","BIRMINGHAM","AL",352940110,1,"Public, 4-year or above",6480,9766,16246,,
+10069001,2006,"Off-campus","Amridge University","Main Campus","1200 TAYLOR RD","MONTGOMERY","AL",361173553,2,"Private nonprofit, 4-year or above",344,376,720,0,0
+10069001,2006,"On-campus","Amridge University","Main Campus","1200 TAYLOR RD","MONTGOMERY","AL",361173553,2,"Private nonprofit, 4-year or above",344,376,720,0,0
+10069001,2006,"Total on or off campus","Amridge University","Main Campus","1200 TAYLOR RD","MONTGOMERY","AL",361173553,2,"Private nonprofit, 4-year or above",344,376,720,0,0
+10069001,2007,"Off-campus","Amridge University","Main Campus","1200 TAYLOR RD","MONTGOMERY","AL",361173553,2,"Private nonprofit, 4-year or above",344,376,720,0,0
+10069001,2007,"On-campus","Amridge University","Main Campus","1200 TAYLOR RD","MONTGOMERY","AL",361173553,2,"Private nonprofit, 4-year or above",344,376,720,0,0
+10069001,2007,"Total on or off campus","Amridge University","Main Campus","1200 TAYLOR RD","MONTGOMERY","AL",361173553,2,"Private nonprofit, 4-year or above",344,376,720,0,0
+10070601,2006,"Off-campus","University of Alabama in Huntsville","Main Campus","301 SPARKMAN DR","HUNTSVILLE","AL",35899,1,"Public, 4-year or above",3900,3364,7264,0,0
