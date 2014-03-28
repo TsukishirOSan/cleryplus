@@ -4,28 +4,32 @@ require 'csv'
 class CsvImporter < Struct.new(:csv_path)
   include Contracts
 
-
-  # maps between text columns and constants
+  # map between text column headers and constants
   # @api public
   # @return Hash{String => Symbol}
   HEADER_MAP = {
-    'year'             => :survey_year,
-    'UNITID_P'         => :unit_id,
-    'on_or_off_campus' => :on_or_off_campus,
-    'INSTNM'           => :institution_name,
-    'BRANCH'           => :campus_name,
-    'Institution Size' => :institution_size,
-    'Address'          => :address,
-    'City'             => :city,
-    'State'            => :state,
-    'Zip'              => :zip,
-    'sector_cd'        => :sector_cd,
-    'sector_desc'      => :sector_desc,
-    'men_total'        => :men_total,
-    'women_total'      => :women_total,
-    'Total'            => :total,
-    'FORCIB'           => :forcible,
-    'NONFOR'           => :non_forcible
+    'year'                            => :survey_year,
+    'UNITID_P'                        => :unit_id,
+    'on_or_off_campus'                => :on_or_off_campus,
+    'INSTNM'                          => :institution_name,
+    'BRANCH'                          => :campus_name,
+    'Institution Size'                => :institution_size,
+    'Address'                         => :address,
+    'City'                            => :city,
+    'State'                           => :state,
+    'Zip'                             => :zip,
+    'sector_cd'                       => :sector_cd,
+    'sector_desc'                     => :sector_desc,
+    'men_total'                       => :men_total,
+    'women_total'                     => :women_total,
+    'Total'                           => :total,
+    'FORCIB'                          => :forcible,
+    'NONFOR'                          => :non_forcible,
+    'forcib_or_nonfor'                => :forcib_or_nonfor,
+    'rate_assault_per_student'        => :rate_assault_per_student,
+    'rate_assault_per_male_student'   => :rate_assault_per_male_student,
+    'rate_assault_per_female_student' => :rate_assault_per_female_student,
+    'campus_id'                       => :campus_id
   }
 
   Contract nil => ArrayOf[ArrayOf[Maybe[String]]]
