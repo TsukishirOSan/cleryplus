@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: campus
+#
+#  id             :integer          not null, primary key
+#  name           :string(255)
+#  institution_id :integer
+#  campus_id      :integer
+#  created_at     :datetime
+#  updated_at     :datetime
+#  address        :text
+#  city           :string(255)
+#  state          :string(255)
+#  zip            :string(255)
+#
+
 require 'spec_helper'
 
 describe Campus do

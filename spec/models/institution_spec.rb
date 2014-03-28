@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: institutions
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  unit_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'spec_helper'
 
 describe Institution do
