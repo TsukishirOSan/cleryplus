@@ -25,7 +25,7 @@ class CsvImporter < Struct.new(:csv_path)
     'Total'                           => :total,
     'FORCIB'                          => :forcible,
     'NONFOR'                          => :non_forcible,
-    'forcib_or_nonfor'                => :forcib_or_nonfor,
+    'forcib_or_nonfor'                => :forcible_or_nonforcible,
     'rate_assault_per_student'        => :rate_assault_per_student,
     'rate_assault_per_male_student'   => :rate_assault_per_male_student,
     'rate_assault_per_female_student' => :rate_assault_per_female_student,
