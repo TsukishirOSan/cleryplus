@@ -20,6 +20,7 @@ describe Campus do
   let(:campus) { FactoryGirl.build(:campus) }
 
   it { should belong_to(:institution) }
+  it { should have_many(:survey_years) }
 
   describe '#valid?' do
     it { should validate_presence_of(:name) }
