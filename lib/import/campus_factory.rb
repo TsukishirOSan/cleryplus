@@ -9,9 +9,9 @@ class CampusFactory
     Campus
       .where(campus_id: campus_id,
              institution_id: institution_id)
-      .first_or_initialize(name: name,
-                           address: address,
-                           city: city,
-                           state: state)
+      .first_or_create(name: name,
+                       address: address,
+                       city: city,
+                       state: state)
   end
 end

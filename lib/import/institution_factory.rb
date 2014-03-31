@@ -9,6 +9,6 @@ class InstitutionFactory
   def make
     Institution
       .where(name: name, unit_id: unit_id)
-      .first_or_initialize
+      .first_or_create
   end
 end
