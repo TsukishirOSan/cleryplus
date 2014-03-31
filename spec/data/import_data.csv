@@ -1,20 +1,20 @@
-year,on_or_off_campus,INSTNM,BRANCH,Address,City,State,Zip,sector_cd,sector_desc,men_total,women_total,Total,FORCIB,NONFOR,forcib_or_nonfor,rate_assault_per_student,rate_assault_per_male_student,rate_assault_per_female_student,campus_id
-2008,"Total on or off campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,,,,1
-2008,"Off-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,,,,1
-2008,"On-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,,,,1
-2009,"Off-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,,,,1
-2009,"Total on or off campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,,,,1
-2009,"On-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,0,0,0,0,0,0,1
-2008,"On-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,0,0,0,0,0,0,2
-2008,"Total on or off campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,,,,2
-2008,"Off-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,,,,2
-2009,"Off-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,,,,2
-2009,"Total on or off campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,,,,2
-2009,"On-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,0,0,0,0,0,0,2
-2008,"Off-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,,,,3
-2008,"Total on or off campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,,,,3
-2008,"On-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,0,0,0,0,0,0,3
-2009,"Off-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,,,,3
-2009,"Total on or off campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,,,,3
-2009,"On-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,0,0,0,0,0,0,3
-2008,"On-campus","A & W Healthcare Educators","Main Campus","2067 Caton St","New Orleans","LA","70122",99,"New Institution",,,,,,,,,,4
+year,on_or_off_campus,INSTNM,BRANCH,Address,City,State,Zip,sector_cd,sector_desc,men_total,women_total,Total,FORCIB,NONFOR,forcib_or_nonfor,campus_id
+2008,"On-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,1
+2008,"Off-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,1
+2008,"Total on or off campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,1
+2009,"Total on or off campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,1
+2009,"Off-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,,,,1
+2009,"On-campus","360 Degrees Beauty Academy","Main campus","4745 Hwy 6 North","Houston","TX","77084",9,"Private for-profit, less-than 2-year",1,22,23,0,0,0,1
+2008,"Total on or off campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,2
+2008,"Off-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,2
+2008,"On-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,0,0,0,2
+2009,"Off-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,2
+2009,"Total on or off campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,,,,2
+2009,"On-campus","4-States Academy of Cosmetology","Main Campus","28 D Street NE","MIami","OK","74354",9,"Private for-profit, less-than 2-year",1,51,52,0,0,0,2
+2008,"Total on or off campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,3
+2008,"Off-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,3
+2008,"On-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,0,0,0,3
+2009,"Off-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,3
+2009,"Total on or off campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,,,,3
+2009,"On-campus","4-States Okmulgee Academy of Cosmetology","4-States Okmulgee Academy of Cosmetology","308 E 6th St","Okmulgee","OK","74447",9,"Private for-profit, less-than 2-year",1,27,28,0,0,0,3
+2008,"On-campus","A & W Healthcare Educators","Main Campus","2067 Caton St","New Orleans","LA","70122",99,"New Institution",,,,,,,4
