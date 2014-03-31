@@ -7,11 +7,12 @@ class CampusFactory
   Contract nil => Campus
   def make
     Campus
-      .where(campus_id: campus_id,
-             institution_id: institution_id)
-      .first_or_create(name: name,
+      .where(name: name,
+             institution_id: institution_id,
+             city: city,
+             state: state)
+      .first_or_create(campus_id: campus_id,
                        address: address,
-                       city: city,
-                       state: state)
+                       zip: city)
   end
 end
