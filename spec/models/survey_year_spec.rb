@@ -11,6 +11,7 @@
 #  updated_at  :datetime
 #  address     :text
 #  zip         :string(255)
+#  total       :integer
 #
 
 require 'spec_helper'
