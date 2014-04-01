@@ -18,6 +18,7 @@ describe SurveyYear do
 
 
   it { should belong_to(:campus) }
+  it { should have_many(:assault_stats) }
   it { should validate_presence_of(:campus_id) }
   it { should validate_presence_of(:name) }
   it { should validate_numericality_of(:name) }
