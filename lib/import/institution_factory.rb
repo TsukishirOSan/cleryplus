@@ -3,12 +3,12 @@ class InstitutionFactory
   include ActiveModel::Model
   include Contracts
 
-  attr_accessor :name, :unit_id
+  attr_accessor :name
 
   Contract nil => Institution
   def make
     Institution
-      .where(name: name, unit_id: unit_id)
+      .where(name: name)
       .first_or_create
   end
 end

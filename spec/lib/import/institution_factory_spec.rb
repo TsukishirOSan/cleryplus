@@ -5,8 +5,7 @@ describe InstitutionFactory do
 
   let(:attributes) do
     {
-      :name    => institution.name,
-      :unit_id => institution.unit_id
+      :name    => institution.name
     }
   end
 

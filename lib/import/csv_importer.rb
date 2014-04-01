@@ -9,7 +9,6 @@ class CsvImporter < Struct.new(:csv_path)
   # @return Hash{String => Symbol}
   HEADER_MAP = {
     'year'                            => :survey_year,
-    'UNITID_P'                        => :unit_id,
     'on_or_off_campus'                => :on_or_off_campus,
     'INSTNM'                          => :institution_name,
     'BRANCH'                          => :campus_name,

@@ -14,6 +14,5 @@
 FactoryGirl.define do
   factory :institution do
     sequence(:name) {|n| "Institution #{n}" }
-    sequence(:unit_id) {|n| n + 10 }
   end
 end

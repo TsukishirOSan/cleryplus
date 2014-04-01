@@ -31,10 +31,7 @@ class Importer
   def handle(record)
     Rails.logger.info("Handling record for #{record[:institution_name]}")
 
-    institution = InstitutionFactory.new(
-      :name    => record[:institution_name],
-      :unit_id => record.fetch(:unit_id, 0),
-    ).make
+    institution = InstitutionFactory.new(:name => record[:institution_name]).make
 
     campus = CampusFactory.new(
       :name => record[:campus_name],
