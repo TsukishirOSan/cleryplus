@@ -35,7 +35,11 @@ class CsvImporter < Struct.new(:csv_path)
   def rows
     unless @rows.present?
       Rails.logger.info("Reading CSV from #{csv_path}")
-      @rows = CSV.read(csv_path)
+      raw = File.read(csv_path)
+      Rails.logger.info("Read #{raw.bytes.length} bytes. Forcing UTF-8 encoding")
+      fixed = raw.encode("UTF-8", :invalid => :replace, :undef => :replace, :replace => "?")
+      Rails.logger.info("Parsing CSV")
+      @rows = CSV.parse(fixed)
       Rails.logger.info("Read #{rows.length - 1} usable rows from CSV")
     end
 
