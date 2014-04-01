@@ -9,6 +9,8 @@
 #  women_total :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  address     :text
+#  zip         :string(255)
 #
 
 require 'spec_helper'
