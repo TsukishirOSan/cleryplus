@@ -5,10 +5,12 @@ describe SurveyYearFactory do
 
   let(:attributes) do
     {
-      :name           => survey_year.name,
-      :campus_id      => survey_year.campus_id,
-      :men_total      => survey_year.men_total,
-      :women_total     => survey_year.women_total
+      :name        => survey_year.name,
+      :campus_id   => survey_year.campus_id,
+      :men_total   => survey_year.men_total,
+      :women_total => survey_year.women_total,
+      :address     => survey_year.address,
+      :zip         => survey_year.zip
     }
   end
 

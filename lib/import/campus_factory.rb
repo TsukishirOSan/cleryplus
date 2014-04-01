@@ -2,7 +2,7 @@ class CampusFactory
   include ActiveModel::Model
   include Contracts
 
-  attr_accessor :campus_id, :name, :institution_id, :address, :city, :state, :zip
+  attr_accessor :campus_id, :name, :institution_id, :city, :state
 
   Contract nil => Campus
   def make
@@ -11,8 +11,6 @@ class CampusFactory
              institution_id: institution_id,
              city: city,
              state: state)
-      .first_or_create(campus_id: campus_id,
-                       address: address,
-                       zip: city)
+      .first_or_create(campus_id: campus_id)
   end
 end

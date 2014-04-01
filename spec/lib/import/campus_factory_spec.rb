@@ -8,10 +8,8 @@ describe CampusFactory do
       :name           => campus.name,
       :campus_id      => campus.campus_id,
       :institution_id => campus.institution_id,
-      :address        => campus.address,
       :city           => campus.city,
       :state          => campus.state,
-      :zip            => campus.zip
     }
   end
 

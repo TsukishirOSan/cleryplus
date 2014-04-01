@@ -39,17 +39,17 @@ class Importer
     campus = CampusFactory.new(
       :name => record[:campus_name],
       :institution_id => institution.id,
-      :address => record[:address],
       :city => record[:city],
-      :zip => record[:zip],
       :campus_id => record[:campus_id],
     ).make
 
     survey_year = SurveyYearFactory.new(
-      name: record[:survey_year],
-      men_total: record[:men_total],
-      women_total: record[:women_total],
-      campus_id: campus.id
+      :name        => record[:survey_year],
+      :men_total   => record[:men_total],
+      :women_total => record[:women_total],
+      :address     => record[:address],
+      :zip         => record[:zip],
+      :campus_id   => campus.id
     ).make
 
     institution
