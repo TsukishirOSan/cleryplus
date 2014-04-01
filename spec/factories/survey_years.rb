@@ -20,6 +20,7 @@ FactoryGirl.define do
     sequence(:name) {|n| 2000 + n }
     men_total 500
     women_total 500
+    total 1000
     sequence(:address) {|n| "Address #{n}" }
     sequence(:zip) {|n| "12#{n}00" }
 

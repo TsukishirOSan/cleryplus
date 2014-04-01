@@ -33,4 +33,47 @@ describe Importer do
       it { expect { importer.import! }.to change(SurveyYear, :count).by(7) }
     end
   end
+
+  describe '#population_total' do
+    context 'given an existing total' do
+      let(:attrs) do
+        {
+          :men_total   => 10,
+          :women_total => 15,
+          :total       => 25
+        }
+      end
+
+      subject { importer.population_total(attrs) }
+      it { should eq(attrs[:total]) }
+    end
+
+    context 'given a non-existant total' do
+      context 'nil' do
+        let(:attrs) do
+          {
+            :men_total   => 10,
+            :women_total => 15,
+            :total       => nil
+          }
+        end
+
+        subject { importer.population_total(attrs) }
+        it { should eq(25) }
+      end
+
+      context '0' do
+        let(:attrs) do
+          {
+            :men_total   => 10,
+            :women_total => 15,
+            :total       => 0
+          }
+        end
+
+        subject { importer.population_total(attrs) }
+        it { should eq(25) }
+      end
+    end
+  end
 end

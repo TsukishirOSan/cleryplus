@@ -18,7 +18,6 @@ require 'spec_helper'
 describe SurveyYear do
   let(:survey_year) { FactoryGirl.build(:survey_year) }
 
-
   it { should belong_to(:campus) }
   it { should have_many(:assault_stats) }
   it { should validate_presence_of(:campus_id) }
@@ -28,6 +27,11 @@ describe SurveyYear do
   describe '#valid' do
     context 'given valid attributes' do
       it('validates') { expect(survey_year).to be_valid }
+    end
+
+    context 'given an invalid total' do
+      subject { survey_year.total = survey_year.men_total; survey_year }
+      it { should_not be_valid }
     end
   end
 end

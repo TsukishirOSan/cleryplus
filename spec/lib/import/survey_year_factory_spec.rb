@@ -9,6 +9,7 @@ describe SurveyYearFactory do
       :campus_id   => survey_year.campus_id,
       :men_total   => survey_year.men_total,
       :women_total => survey_year.women_total,
+      :total       => survey_year.total,
       :address     => survey_year.address,
       :zip         => survey_year.zip
     }

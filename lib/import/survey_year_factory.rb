@@ -2,7 +2,7 @@ class SurveyYearFactory
   include ActiveModel::Model
   include Contracts
 
-  attr_accessor :name, :campus_id, :men_total, :women_total, :address, :zip
+  attr_accessor :name, :campus_id, :men_total, :women_total, :total, :address, :zip
 
   Contract nil => SurveyYear
   def make
@@ -11,6 +11,7 @@ class SurveyYearFactory
       .first_or_create(men_total: men_total,
                        women_total: women_total,
                        address: address,
+                       total: total,
                        zip: zip)
   end
 end

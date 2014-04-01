@@ -40,15 +40,25 @@ class Importer
       :campus_id => record[:campus_id],
     ).make
 
+
     survey_year = SurveyYearFactory.new(
       :name        => record[:survey_year],
       :men_total   => record[:men_total],
       :women_total => record[:women_total],
+      :total       => population_total(record),
       :address     => record[:address],
       :zip         => record[:zip],
       :campus_id   => campus.id
     ).make
 
     institution
+  end
+
+  Contract HashOf[Symbol, Or[String,Num,nil]] => Num
+  def population_total(record_hash)
+    total = record_hash.fetch(:total, 0)
+    calculated_total = (record_hash[:men_total].to_i + record_hash[:women_total].to_i)
+
+    total == calculated_total ? total : calculated_total
   end
 end
