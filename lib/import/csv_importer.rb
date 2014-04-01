@@ -53,9 +53,12 @@ class CsvImporter < Struct.new(:csv_path)
   def to_hashes
     headers = rows.first.map {|string_header| HEADER_MAP.fetch(string_header) }
 
-    rows[1..rows.length].map do |row|
+    output = rows[1..rows.length].map do |row|
       Rails.logger.info("Constructing hash for #{Rainbow(row[2]).green} (#{row.first})")
       Hash[headers.zip(row)]
     end
+
+    Rails.logger.info("Finished constructing hashes")
+    output
   end
 end
