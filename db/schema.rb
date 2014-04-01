@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401150941) do
+ActiveRecord::Schema.define(version: 20140401220737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20140401150941) do
     t.datetime "updated_at"
   end
 
+  add_index "assault_stats", ["name"], name: "index_assault_stats_on_name", using: :btree
+  add_index "assault_stats", ["survey_year_id"], name: "index_assault_stats_on_survey_year_id", using: :btree
+
   create_table "campus", force: true do |t|
     t.string   "name"
     t.integer  "institution_id"
@@ -36,11 +39,18 @@ ActiveRecord::Schema.define(version: 20140401150941) do
     t.string   "state"
   end
 
+  add_index "campus", ["city"], name: "index_campus_on_city", using: :btree
+  add_index "campus", ["institution_id"], name: "index_campus_on_institution_id", using: :btree
+  add_index "campus", ["name"], name: "index_campus_on_name", using: :btree
+  add_index "campus", ["state"], name: "index_campus_on_state", using: :btree
+
   create_table "institutions", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "institutions", ["name"], name: "index_institutions_on_name", using: :btree
 
   create_table "survey_years", force: true do |t|
     t.integer  "name"
@@ -53,5 +63,8 @@ ActiveRecord::Schema.define(version: 20140401150941) do
     t.string   "zip"
     t.integer  "total"
   end
+
+  add_index "survey_years", ["campus_id"], name: "index_survey_years_on_campus_id", using: :btree
+  add_index "survey_years", ["name"], name: "index_survey_years_on_name", using: :btree
 
 end
