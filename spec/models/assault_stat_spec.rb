@@ -27,10 +27,24 @@ describe AssaultStat do
       it { expect(assault_stat).to be_valid }
     end
 
-    context 'given invalid attributes' do
-      context 'given an invalid total' do
-        subject { assault_stat.total = assault_stat.forcible; assault_stat }
-        it { should_not be_valid }
+    describe 'total' do
+      context 'given invalid attributes' do
+        context 'given an invalid total' do
+          subject { assault_stat.total = assault_stat.forcible; assault_stat }
+          it { should_not be_valid }
+        end
+      end
+
+      context 'given valid attributes' do
+        context 'given nils' do
+          it 'validates' do
+            assault_stat.total = nil
+            assault_stat.forcible = nil
+            assault_stat.non_forcible = nil
+
+            expect(assault_stat).to be_valid
+          end
+        end
       end
     end
   end

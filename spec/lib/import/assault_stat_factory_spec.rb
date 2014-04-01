@@ -30,4 +30,20 @@ describe AssaultStatFactory do
     end
   end
 
+  describe '#determine_name' do
+    context 'given "On-campus"' do
+      subject { assault_stat_factory.determine_name('On-campus') }
+      it { should == 'On-Campus' }
+    end
+
+    context 'given "Off-campus"' do
+      subject { assault_stat_factory.determine_name('Off-campus') }
+      it { should == 'Off-Campus' }
+    end
+
+    context 'given "Total on or off campus"' do
+      subject { assault_stat_factory.determine_name('Total on or off campus') }
+      it { should == 'Both' }
+    end
+  end
 end

@@ -27,11 +27,15 @@ class AssaultStat < ActiveRecord::Base
   private
   Contract nil => Bool
   def ensure_totals_match_up
-    if (forcible.to_i + non_forcible.to_i) == total
-      output = true
+    if [forcible, non_forcible, total].map(&:present?).any?
+      if (forcible.to_i + non_forcible.to_i) == total
+        output = true
+      else
+        self.errors.add(:total, "total must equal (forcible + non_forcible)")
+        output = false
+      end
     else
-      self.errors.add(:total, "total must equal (forcible + non_forcible)")
-      output = false
+      output = true
     end
 
     output

@@ -32,6 +32,10 @@ describe Importer do
     context 'survey years' do
       it { expect { importer.import! }.to change(SurveyYear, :count).by(7) }
     end
+
+    context 'assault stats' do
+      it { expect { importer.import! }.to change(AssaultStat, :count).by(19) }
+    end
   end
 
   describe '#population_total' do

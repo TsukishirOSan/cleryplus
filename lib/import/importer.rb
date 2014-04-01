@@ -34,10 +34,10 @@ class Importer
     institution = InstitutionFactory.new(:name => record[:institution_name]).make
 
     campus = CampusFactory.new(
-      :name => record[:campus_name],
+      :name           => record[:campus_name],
       :institution_id => institution.id,
-      :city => record[:city],
-      :campus_id => record[:campus_id],
+      :city           => record[:city],
+      :campus_id      => record[:campus_id]
     ).make
 
 
@@ -49,6 +49,14 @@ class Importer
       :address     => record[:address],
       :zip         => record[:zip],
       :campus_id   => campus.id
+    ).make
+
+    assault_stat = AssaultStatFactory.new(
+      :name           => record[:on_or_off_campus],
+      :forcible       => record[:forcible],
+      :non_forcible   => record[:non_forcible],
+      :total          => record[:forcible_or_nonforcible],
+      :survey_year_id => survey_year.id
     ).make
 
     institution
