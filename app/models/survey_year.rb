@@ -18,7 +18,7 @@ class SurveyYear < ActiveRecord::Base
   include Contracts
 
   belongs_to :campus
-  has_many :assault_stats
+  has_many :assault_stats, dependent: :destroy
 
   validates :name, presence: true, numericality: true
   validates :campus_id, presence: true

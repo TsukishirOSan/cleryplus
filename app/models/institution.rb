@@ -9,7 +9,7 @@
 #
 
 class Institution < ActiveRecord::Base
-  has_many :campuses, class_name: 'Campus'
+  has_many :campuses, class_name: 'Campus', dependent: :destroy
 
   validates :name, presence: true
 end

@@ -14,7 +14,7 @@
 
 class Campus < ActiveRecord::Base
   belongs_to :institution, inverse_of: :campuses
-  has_many :survey_years
+  has_many :survey_years, dependent: :destroy
 
   validates :name, presence: true
   validates :campus_id, presence: true, numericality: true
