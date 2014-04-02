@@ -1,3 +1,4 @@
 class InstitutionSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :name
+  has_many :campuses
 end
