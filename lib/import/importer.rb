@@ -1,3 +1,6 @@
+# High-level orchestration of CSV import.
+#
+# @note ideally this will also support reading from an IO object, which would rock.
 class Importer
   include ActiveModel::Model
   include Contracts
@@ -5,6 +8,10 @@ class Importer
   attr_accessor :pathname, :gzip, :io
 
   Contract nil => ArrayOf[HashOf[Symbol, Maybe[String]]]
+  # Delegates the work of CSV importing and conversion to hashes to
+  # {CsvImporter}
+  # @api private
+  # @return [Array<Array<String,Numeric,nil>>] the rows from the CSV
   def records
     Rails.logger.info("Importer attempting to load import records")
 
@@ -21,6 +28,12 @@ class Importer
   end
 
   Contract nil => ArrayOf[Institution]
+  # Conduct the entirety of the import operation
+  #
+  # @api public
+  # @example assuming an instance called importer
+  #   importer.import!
+  # @return [Array<Institution>]
   def import!
     records.map do |record|
       handle(record)
@@ -28,6 +41,12 @@ class Importer
   end
 
   Contract HashOf[Symbol, Maybe[String]] => Institution
+  # Actually builds a complete object graph for a logical institution
+  # and yields an {Institution} instance as the top-level node
+  #
+  # @api private
+  # @param record [Hash{Symbol=>String,nil}] the CSV row as a hash
+  # @return [Institution] with all child components
   def handle(record)
     Rails.logger.info("Handling record for #{record[:institution_name]}")
 
@@ -63,6 +82,12 @@ class Importer
   end
 
   Contract HashOf[Symbol, Or[String,Num,nil]] => Num
+  # If the input CSV doesn't have the calculated population total, we
+  # need to compute it ourselves.
+  #
+  # @api private
+  # @param record_hash [Hash{Symbol=>String,Numeric,nil}] the CSV row as a hash
+  # @return [Numeric] the calculated population total
   def population_total(record_hash)
     total = record_hash.fetch(:total, 0)
     calculated_total = (record_hash[:men_total].to_i + record_hash[:women_total].to_i)

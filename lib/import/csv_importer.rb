@@ -6,7 +6,7 @@ class CsvImporter < Struct.new(:csv_path)
 
   # map between text column headers and constants
   # @api public
-  # @return Hash{String => Symbol}
+  # @return [Hash{String => Symbol}]
   HEADER_MAP = {
     'year'                            => :survey_year,
     'on_or_off_campus'                => :on_or_off_campus,
@@ -49,7 +49,7 @@ class CsvImporter < Struct.new(:csv_path)
   Contract nil => ArrayOf[HashOf[Symbol,Or[String,nil]]]
   # zips header row and row data to make hashes
   # @api public
-  # @return [Array<Hash{Symbol => String,nil}>] the hashes
+  # @return [Array<Hash{Symbol=>String,nil}>] the hashes
   def to_hashes
     headers = rows.first.map {|string_header| HEADER_MAP.fetch(string_header) }
 
