@@ -10,6 +10,7 @@
 
 class Institution < ActiveRecord::Base
   has_many :campuses, class_name: 'Campus', dependent: :destroy
+  has_many :survey_years, through: :campuses
 
   validates :name, presence: true
 end

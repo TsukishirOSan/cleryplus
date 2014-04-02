@@ -14,6 +14,7 @@ describe Institution do
   let (:institution) { FactoryGirl.build(:institution) }
 
   it { should have_many(:campuses) }
+  it { should have_many(:survey_years).through(:campuses) }
 
   describe '#valid?' do
     it { should validate_presence_of(:name) }
