@@ -18,6 +18,7 @@ Cleryplus::Application.configure do
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+  config.log_tags = [ :uuid ]
 
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
