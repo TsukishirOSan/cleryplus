@@ -7,7 +7,7 @@ module Api
     def create
       if params[:q].present?
         @q = Institution.search(params[:q])
-        @institutions = @q.result(distinct: true)
+        @institutions = @q.result(distinct: true).includes(campuses: { survey_years: :assault_stats })
 
         render json: @institutions
       else
