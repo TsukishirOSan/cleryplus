@@ -7,7 +7,7 @@ class Importer
 
   attr_accessor :pathname, :gzip, :io
 
-  Contract nil => ArrayOf[HashOf[Symbol, Maybe[String]]]
+  #Contract nil => ArrayOf[HashOf[Symbol, Maybe[String]]]
   # Delegates the work of CSV importing and conversion to hashes to
   # {CsvImporter}
   # @api private
@@ -27,7 +27,7 @@ class Importer
     output
   end
 
-  Contract nil => ArrayOf[Institution]
+  #Contract nil => ArrayOf[Institution]
   # Conduct the entirety of the import operation
   #
   # @api public
@@ -40,7 +40,7 @@ class Importer
     end
   end
 
-  Contract HashOf[Symbol, Maybe[String]] => Institution
+  #Contract HashOf[Symbol, Maybe[String]] => Institution
   # Actually builds a complete object graph for a logical institution
   # and yields an {Institution} instance as the top-level node
   #
@@ -81,7 +81,7 @@ class Importer
     institution
   end
 
-  Contract HashOf[Symbol, Or[String,Num,nil]] => Num
+  #Contract HashOf[Symbol, Or[String,Num,nil]] => Num
   # If the input CSV doesn't have the calculated population total, we
   # need to compute it ourselves.
   #

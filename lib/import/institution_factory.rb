@@ -5,7 +5,7 @@ class InstitutionFactory
 
   attr_accessor :name
 
-  Contract nil => Institution
+  #Contract nil => Institution
   # Construct or return the existing Institution in accordance with
   # attributes provided to the factory
   #
@@ -16,6 +16,6 @@ class InstitutionFactory
   def make
     Institution
       .where(name: name)
-      .first_or_create
+      .first_or_create!
   end
 end

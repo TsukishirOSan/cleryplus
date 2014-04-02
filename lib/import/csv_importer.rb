@@ -28,7 +28,7 @@ class CsvImporter < Struct.new(:csv_path)
     'campus_id'                       => :campus_id
   }
 
-  Contract nil => ArrayOf[ArrayOf[Maybe[String]]]
+  #Contract nil => ArrayOf[ArrayOf[Maybe[String]]]
   # reads in CSV, removes bogus header row and returns real rows
   # @api private
   # @return [Array<Array<String,nil>>] array of rows
@@ -46,7 +46,7 @@ class CsvImporter < Struct.new(:csv_path)
     @rows
   end
 
-  Contract nil => ArrayOf[HashOf[Symbol,Or[String,nil]]]
+  #Contract nil => ArrayOf[HashOf[Symbol,Or[String,nil]]]
   # zips header row and row data to make hashes
   # @api public
   # @return [Array<Hash{Symbol=>String,nil}>] the hashes

@@ -21,7 +21,7 @@ class AssaultStatFactory
     'On-Campus'              => 'On-Campus'
   }
 
-  Contract nil => AssaultStat
+  #Contract nil => AssaultStat
   # Construct or return the existing AssaultStat in accordance with
   # attributes provided to the factory
   #
@@ -39,12 +39,12 @@ class AssaultStatFactory
     AssaultStat
       .where(name: usable_name,
              survey_year_id: survey_year_id)
-      .first_or_create(forcible: forcible,
-                       non_forcible: non_forcible,
-                       total: total)
+      .first_or_create!(forcible: forcible,
+                        non_forcible: non_forcible,
+                        total: total)
   end
 
-  Contract String => String
+  #Contract String => String
   # Map input CSV stat categorizations to their internal
   # representations
   #

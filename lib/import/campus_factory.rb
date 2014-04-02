@@ -5,7 +5,7 @@ class CampusFactory
 
   attr_accessor :campus_id, :name, :institution_id, :city, :state
 
-  Contract nil => Campus
+  #Contract nil => Campus
   # Construct or return the existing Campus in accordance with
   # attributes provided to the factory
   #
@@ -19,6 +19,6 @@ class CampusFactory
              institution_id: institution_id,
              city: city,
              state: state)
-      .first_or_create(campus_id: campus_id)
+      .first_or_create!(campus_id: campus_id)
   end
 end
