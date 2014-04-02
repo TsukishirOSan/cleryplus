@@ -101,6 +101,8 @@ GEM
       hodel_3000_compliant_logger
     oj (2.6.1)
     pg (0.17.1)
+    polyamorous (0.6.4)
+      activerecord (>= 3.0)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -138,6 +140,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.2.1)
+    ransack (1.1.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      polyamorous (~> 0.6.0)
     rspec-collection_matchers (0.0.3)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.0.0.beta2)
@@ -230,6 +236,7 @@ DEPENDENCIES
   rails-api
   rails-erd
   rainbow
+  ransack
   rspec-rails (~> 3.0.0.beta)
   shoulda-matchers
   simplecov (~> 0.8.2)
