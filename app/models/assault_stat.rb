@@ -14,6 +14,10 @@
 
 class AssaultStat < ActiveRecord::Base
   include Contracts
+  # List of acceptable names (categorizations for assault stats)
+  #
+  # @api private
+  # @return [Array<String>]
   CATEGORIZATIONS = ['On-Campus', 'Off-Campus', 'Both']
 
   belongs_to :survey_year
