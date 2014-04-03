@@ -2,6 +2,8 @@
 
 [![Code Climate](https://codeclimate.com/github/SexualHealthInnovations/cleryplus.png)](https://codeclimate.com/github/SexualHealthInnovations/cleryplus)
 
+[![Coverage Status](https://coveralls.io/repos/SexualHealthInnovations/cleryplus/badge.png)](https://coveralls.io/r/SexualHealthInnovations/cleryplus)
+
 # Clery Plus #
 
 Ideally, a less-terrible way to access
