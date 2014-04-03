@@ -5,7 +5,7 @@ class Importer
   include ActiveModel::Model
   include Contracts
 
-  attr_accessor :pathname, :gzip, :io
+  attr_accessor :pathname, :io
 
   #Contract nil => ArrayOf[HashOf[Symbol, Maybe[String]]]
   # Delegates the work of CSV importing and conversion to hashes to
