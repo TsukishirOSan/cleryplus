@@ -78,6 +78,7 @@ GEM
     fastercsv (1.5.5)
     haml (4.0.5)
       tilt
+    hashr (0.0.22)
     highline (1.6.21)
     hike (1.2.3)
     hodel_3000_compliant_logger (0.1.1)
@@ -170,6 +171,7 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.4.1)
       sexp_processor (~> 4.1)
+    safe_yaml (0.9.7)
     sass (3.3.4)
     sexp_processor (4.4.3)
     shoulda-matchers (2.5.0)
@@ -199,6 +201,9 @@ GEM
     thread_safe (0.3.1)
       atomic (>= 1.1.7, < 2)
     tilt (1.4.1)
+    travis-lint (1.8.0)
+      hashr (~> 0.0.22)
+      safe_yaml (~> 0.9.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -240,6 +245,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0.0.beta)
   shoulda-matchers
   simplecov (~> 0.8.2)
+  travis-lint
   uuid
   yard
   yardstick

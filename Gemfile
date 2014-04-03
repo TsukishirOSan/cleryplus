@@ -17,6 +17,7 @@ gem 'ransack'
 gem 'uuid'
 
 group :development do
+  gem 'travis-lint'
   gem 'yard'
   gem 'yardstick'
 end
