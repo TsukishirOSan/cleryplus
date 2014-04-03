@@ -19,6 +19,7 @@ gem 'uuid'
 gem 'unicorn'
 
 group :development do
+  gem 'foreman'
   gem 'travis-lint'
   gem 'yard'
   gem 'yardstick'
