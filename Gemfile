@@ -16,6 +16,7 @@ gem 'rack-timeout'
 gem 'rainbow'
 gem 'ransack'
 gem 'uuid'
+gem 'unicorn'
 
 group :development do
   gem 'travis-lint'
