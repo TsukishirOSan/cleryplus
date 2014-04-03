@@ -12,6 +12,7 @@ gem 'awesome_print'
 gem 'contracts', git: 'https://github.com/egonSchiele/contracts.ruby.git'
 gem 'oj'
 gem 'pg' # Use postgresql as the database for Active Record
+gem 'rack-timeout'
 gem 'rainbow'
 gem 'ransack'
 gem 'uuid'
