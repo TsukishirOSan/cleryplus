@@ -28,23 +28,38 @@ describe Api::SearchController do
       end
 
       context 'given search params' do
-        let(:search_params) do
-          {
-            :q => {name_cont: 'Institution'}
-          }
+        context 'with a query' do
+          let(:search_params) do
+            {
+              :q => {name_cont: 'Institution'}
+            }
+          end
+
+          before(:each) do
+            5.times { FactoryGirl.create(:institution) }
+            post '/api/search', search_params.to_json, request_headers
+          end
+
+          it 'responds with 200' do
+            expect(response.status).to eq(200)
+          end
+
+          it 'returns results' do
+            expect(Oj.load(response.body)['search'].length).to eq(5)
+          end
         end
 
-        before(:each) do
-          5.times { FactoryGirl.create(:institution) }
-          post '/api/search', search_params.to_json, request_headers
-        end
+        context 'with an empty query' do
+          let(:search_params) do
+            {
+              :q => {}
+            }
+          end
 
-        it 'responds with 200' do
-          expect(response.status).to eq(200)
-        end
-
-        it 'returns results' do
-          expect(Oj.load(response.body)['search'].length).to eq(5)
+          it 'responds with 400' do
+            post '/api/search', search_params.to_json, request_headers
+            expect(response.status).to eq(400)
+          end
         end
       end
     end
