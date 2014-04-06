@@ -14,7 +14,7 @@ gem 'oj'
 gem 'pg' # Use postgresql as the database for Active Record
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rack-timeout'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'rainbow'
 gem 'ransack'
 gem 'uuid'
